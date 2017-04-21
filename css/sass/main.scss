@@ -1,0 +1,300 @@
+$whitish: #eeeeee;
+$greyish: rgba(0, 0, 0, .65);
+$lightblue: rgb(25, 202, 241);
+$textColor: #333;
+
+
+@mixin flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin backgroundsizing {
+  background-size: cover;
+  min-height: 100vh;
+}
+//General styles
+html{  font-size: 16px;}
+h1{  font-size: 2.5rem;}
+.wrapper{
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 2%;
+  padding-top: 70px;
+}
+.navwrap{
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 2%;
+}
+.text{
+  color: $textColor;
+  font-size: 1.5rem;
+}
+.white-text{
+  color: $whitish;
+}
+.shadow{  text-shadow: 3px 3px 7px #000;}
+.flexcont{  @include flexcenter;}
+
+//navigation bar styles
+#navbar{
+  background-color: $greyish;
+  min-height: 40px;
+  position: fixed;
+  z-index: 100;
+  min-width: 100%;
+  .wrapper{
+    @include flexcenter;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    width: 100%;
+    height: 40px;
+    a {
+      color: $whitish;
+      text-decoration: none;
+      transition: all .5s ease;
+      font-family: fantasy, serif;
+      letter-spacing: .07rem;
+      word-spacing: .3rem;
+      &:hover {color: $lightblue;}
+    }
+  }
+  li  {
+    display: inline-block;
+  }
+
+  #menu-toggle {display: none;}
+  .label-toggle {display: none;}
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  //toggles to hamburger for smaller devices
+  @media screen and (max-width: 768px) {
+    ul {
+      display: block;
+      height: 0;
+      list-style-type: none;
+      opacity: 0;
+      text-align: center;
+      transition: all 1s ease;
+      width: 100%;
+      visibility: hidden;
+    }
+    li {
+      border-bottom: 2px solid $greyish;
+      color: $whitish;
+      display: block;
+      font-size: 1.5em;
+      padding: 2em 0;
+    }
+    #menu-toggle:checked ~ ul {
+      opacity: 1;
+      height: 100vh;
+      visibility: visible;
+    }
+    .label-toggle {
+      background: linear-gradient(to bottom, $greyish 0%, $greyish 20%, transparent 20%, transparent 40%, $greyish 40%, $greyish 60%, transparent 60%, transparent 80%, $greyish 80%, $greyish 100%); //Gradient Hamburger
+      cursor: pointer;
+      display: block;
+      float: right;
+      height: 30px;
+      margin-top: 4px;
+      width: 30px;
+    }
+    .wrapper {display: block;}
+  }
+}//end navbar styles
+
+//home  styles
+#home{
+  @include flexcenter;
+  background: linear-gradient(rgba(90,90,90,.8), rgba(90,90,90,.8)),
+  url(../images/bg1.jpg)  -25px -50px;
+  position:relative ;
+  z-index:0;
+
+  @include backgroundsizing;
+  background-size: calc(100% + 50px);
+  text-align: center;
+  color: $whitish;
+  h1{
+    font-size: 3.5rem;
+  }
+  h1,span{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: bold;
+  }
+  span{
+    padding-top: 25px;
+    font-size: 2rem;
+    display: block;
+  }
+} //end home styles
+
+//about me styles
+#about{
+  @include flexcenter;
+  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,1), rgba(0,0,0,.7)),
+  url(../images/bg3.jpg) center;
+  @include backgroundsizing;
+  .wrapper{
+    @include flexcenter;
+    justify-content: space-between;
+  }
+  .me{
+    width: 70%;
+    box-sizing: border-box;
+  }
+  img{
+    width: 20%;
+    border-radius: 100%;
+    float: left;
+  }
+  span{
+    font-style: italic;
+  }
+} //end about styles
+
+//work styles
+#work{
+  @include backgroundsizing;
+  text-align: center;
+}
+.flexcont{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 50px;
+  img{
+    max-width: 250px;
+    width: 200px;
+  }
+  figure{
+    @include flexcenter;
+    box-sizing: border-box;
+    position: relative;
+    padding: 20px 0;
+  }
+}
+.relative{
+  position: relative;
+  padding: 5px;
+}
+//when the figure element is hovered, change it's opacity
+.mask{
+  @include flexcenter;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  color: #fff;
+  border-radius: 4px;
+  transition: .6s;
+  &:hover{
+    opacity: 1;
+    background-color: rgba(13, 122, 193, .8);
+  }
+  p{
+    font-size:1rem;
+    font-weight: bold;
+    padding: 0 25px;
+  }
+}//end work tyles
+
+//resume styles
+#resume{
+  @include backgroundsizing;
+  h1{
+    padding: 20px 0;
+  }
+  li{
+    padding-bottom: 20px;
+  }
+}//end resume
+
+//contact styles
+#contact{
+  background: linear-gradient(to right, rgba(255,255,255,.7), rgba(0,0,0,.7)),
+  url(../images/bg2.jpg) center;
+  @include backgroundsizing;
+  position: relative;
+  @include flexcenter;
+  align-items: flex-start;
+  text-align: center;
+  form{
+    text-align: center;
+    padding-top: 30px;
+  }
+  input,button,textarea{
+    width: 100%;
+    max-width:400px;
+    background-color: rgba(255,255,255,.5);
+    color:#000;
+    font-weight: bolder;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input{
+    margin: 5px 0;
+    padding: 10px;
+  }
+  textarea{
+    height: 100px;
+    border: 1px solid #fff;
+    resize: none;
+    margin: 5px 0;
+  }
+  button{
+    margin: 5px 0;
+    transition: .5s;
+    padding: 10px;
+  }
+  button:hover{
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    box-shadow: 3px 3px 3px #000;
+  }
+} //end contact styles
+
+//footer styles
+#footer{
+  background-color: #333;
+
+}//end footer
+
+
+//scroll effect styles
+body {
+    width: 100%;
+    height: 100%;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
