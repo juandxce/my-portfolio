@@ -250,7 +250,16 @@ h1 {
   .mask p {
     font-size: 1rem;
     font-weight: bold;
-    padding: 0 25px; }
+    padding: 0 15px; }
+  .mask span {
+    font-weight: bolder;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #333;
+    padding: 2px;
+    box-shadow: 1px 1px 3px #000;
+    font-size: 12px;
+    margin: 0 4px; }
 
 #resume {
   background-size: cover;
@@ -309,7 +318,10 @@ h1 {
     box-shadow: 3px 3px 3px #000; }
 
 #footer {
-  background-color: #333; }
+  background-color: #333;
+  color: #fff;
+  padding-bottom: 70px;
+  text-align: center; }
 
 body {
   width: 100%;

@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <!--custom css-->
     <link rel="stylesheet" href="css/main.css">
+    <!-- scrollnav css -->
+    <link rel="stylesheet" href="css/scrolling-nav.css">
   </head>
   <body>
     <nav id="navbar">
@@ -63,18 +65,28 @@
               <a href="https://rawgit.com/juandxce/Tajem-landing-page/master/index.html" target="_blank">
                 <img src="images/tajamlandingpage.png" alt="tajam landing page">
                 <div class="mask">
-                  <p class="price">Pixel perfect? Responsive landing page, made from PSD (HTML, SASS, Bootstrap-3, jQuery)</p>
+                  <p class="price">Pixel perfect?  Tajem landing page</p>
+                    <span>Responsive</span>
+                    <span>HTML</span>
+                    <span>SASS</span>
+                    <span>Bootstrap</span>
+                    <span>PSD-HTML</span>
+                    <span>jQuery</span>
                 </div>
               </a>
             </div>
-
           </figure>
           <figure class="workitem">
             <div class="relative">
               <a href="https://rawgit.com/juandxce/Shophia-psd-to-html/master/index.html" target="_blank">
                 <img src="images/shophia.png" alt="shophia shop">
                 <div class="mask">
-                  <p class="price">Responsive fashion-shop, made from PSD (HTML, CSS,Bootstrap-3)</p>
+                  <p class="price">Shophia Fashion shop </p>
+                  <span>Responsive</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>Bootstrap</span>
+                  <span>PSD-HTML</span>
                 </div>
               </a>
             </div>
@@ -84,7 +96,12 @@
               <a href="https://rawgit.com/juandxce/appLaunchTemplate/master/index.html" target="_blank">
                 <img src="images/applaunch.png" alt="applaunch template">
                 <div class="mask">
-                  <p class="price">Responsive app-launching template, made from PSD (HTML, CSS,Bootstrap-3)</p>
+                  <p class="price">App-launching template</p>
+                  <span>Responsive</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>Bootstrap</span>
+                  <span>PSD-HTML</span>
                 </div>
               </a>
             </div>
@@ -94,7 +111,11 @@
               <a href="https://rawgit.com/juandxce/LandingPageChallenge/master/index.html" target="_blank">
                 <img src="images/AAshop.png" alt="shop">
                 <div class="mask">
-                  <p class="price">Non-responsive shop site, made from PSD (HTML, CSS)</p>
+                  <p class="price">Non-responsive shop site</p>
+                  <span>Non-responsive</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>PSD-HTML</span>
                 </div>
               </a>
             </div>
@@ -179,8 +200,18 @@
 
     <footer id="footer">
       <div class="wrapper">
-
-
+        <div class="column">
+          &copy; Juandxce's portfolio 2017
+        </div>
+        <div class="column">
+          <ul>
+            <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+          </ul>
+        </div>
       </div>
     </footer><!--wel... end footer, I guess-->
           <!--jquery-->
@@ -202,7 +233,7 @@
       sr.reveal('.intro2',{
         duration: 3000,
         origin: 'bottom',
-        delay: 4000
+        delay: 3500
       });
       sr.reveal('.intro3',{
         duration: 4000,
@@ -215,13 +246,13 @@
         delay: 8000
       });
       sr.reveal('.me',{
-        duration: 2000,
+        duration: 1000,
         origin: 'left',
         viewFactor: 0.2,
         distance: '300px'
       });
       sr.reveal('#about img',{
-        duration: 2000,
+        duration: 1000,
         origin: 'rigth',
         viewFactor: 0.2,
         distance: '300px'
@@ -243,6 +274,19 @@
         duration: 1000,
         origin: 'bottom',
         delay: 1500,
+        viewFactor: 0.2,
+        distance: '300px'
+      });
+      sr.reveal('#work h1',{
+        duration: 1000,
+        origin: 'bottom',
+        viewFactor: 0.2,
+        distance: '300px'
+      });
+      sr.reveal('#work figure',{
+        duration: 500,
+        origin: 'bottom',
+        delay: 1000,
         viewFactor: 0.2,
         distance: '300px'
       });
