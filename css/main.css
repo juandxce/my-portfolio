@@ -1,5 +1,6 @@
 html {
-  font-size: 16px; }
+  font-size: 16px;
+  font-family: arial;}
 
 h1 {
   font-size: 2.5rem; }
@@ -17,7 +18,15 @@ h1 {
 
 .text {
   color: #333;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  }
+  ul.text{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul.text li{
+    width: 50%;
+  }
 
 .white-text {
   color: #eeeeee; }
@@ -203,7 +212,8 @@ h1 {
   padding-top: 50px; }
   .flexcont img {
     max-width: 250px;
-    width: 200px; }
+    width: 200px;
+    height: 100px; }
   .flexcont figure {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -246,7 +256,10 @@ h1 {
   transition: .6s; }
   .mask:hover {
     opacity: 1;
-    background-color: rgba(13, 122, 193, 0.8); }
+    background-color: rgba(13, 122, 193, 0.8);
+    top: -5%;
+    height: 110%;
+}
   .mask p {
     font-size: 1rem;
     font-weight: bold;
