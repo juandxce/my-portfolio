@@ -1,2 +1,2 @@
 # my-portfolio
-Portfolio created to showcase my work (right now PSD to HTML conversion)
+Portfolio created to showcase my web develoment work experience
