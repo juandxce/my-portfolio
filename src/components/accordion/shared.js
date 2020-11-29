@@ -17,8 +17,9 @@ export const AccordionButton = ({ children, ...rest }) => (
       paddingBottom: '10px',
       paddingLeft: '15px',
       paddingRight: '30px',
+      fontWeight: 'bold',
       position: 'relative',
-      color: '#0F2137',
+      color: '#ed911a',
       '@media(min-width: 768px)': {
         paddingLeft: '30px',
         paddingRight: '30px',
@@ -81,7 +82,7 @@ export function AccordionContents({ isOpen, ...props }) {
         padding: '0 15px',
         paddingRight: '40px',
         lineHeight: '30px',
-        color: '#343D48',
+        color: '#dedede',
         '@media(min-width: 768px)': {
           padding: '0 30px',
         },

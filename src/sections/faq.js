@@ -55,7 +55,7 @@ const FAQ = () => {
       <Container>
         <BlockTitle
           title="Frequently Ask Questions"
-          text="Ask your question and meet"
+          text="Any questions? Maybe this will help"
         />
         <Flex sx={styles.flex}>
           <Box sx={styles.faqWrapper}>

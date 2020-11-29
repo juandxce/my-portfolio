@@ -189,7 +189,7 @@ export default Testimonials;
 
 const styles = {
   testimonials: {
-    backgroundColor: '#F4F4F6',
+    backgroundColor: '#505052',
     pt: ['80px', null, null, null, '80px', null, '100px'],
     pb: ['60px', null, null, null, '80px', null, '120px'],
   },

@@ -11,10 +11,11 @@ import {
   preventClose,
   combineReducers,
 } from './shared';
+import { FaCaretRight, FaCaretDown} from 'react-icons/fa'
 
 export default function Accordion({ items, ...props }) {
-  const openIcon = <Image src={accordionIconOpen} alt="open icon" />;
-  const closeIcon = <Image src={accordionIconClose} alt="close icon" />;
+  const openIcon = <FaCaretDown />;
+  const closeIcon = <FaCaretRight />;
   return (
     <BaseAccordion
       stateReducer={combineReducers(single, preventClose)}

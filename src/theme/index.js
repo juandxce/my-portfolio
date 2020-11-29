@@ -2,16 +2,16 @@ export default {
   // example colors with dark mode
   breakpoints: ['376px', '576px', '768px', '992px', '1200px', '1650px'],
   colors: {
-    text: '#343D48', // body color and primary color
-    text_secondary: '#02073E', // secondary body color
-    heading: '#02073E', // primary heading color
-    heading_secondary: '#343D48', // heading color
-    background: '#FFFFFF', // body background color
+    text: '#eee', // body color and primary color
+    text_secondary: 'orange', // secondary body color
+    heading: 'orange', // primary heading color
+    heading_secondary: '#ddd', // heading color
+    background: '#333', // body background color
     background_secondary: '#F9FBFD', // secondary background color
     border_color: '#E9EDF5', // border color
-    primary: '#8D448B', // primary button and link color
+    primary: 'orange', // primary button and link color
     secondary: '#793677', // secondary color - can be used for hover states
-    black: '#0F2137', // black color
+    black: '#DEDEDE', // black color
     gray: '#F8FAFC',
     muted: '#7B8188', // muted color
     accent: '#609', // a contrast color for emphasizing UI
@@ -49,7 +49,7 @@ export default {
       px: ['15px', null, null, '30px', '40px'],
     },
     header: {
-      color: '#02073E',
+      color: 'orange',
       fontWeight: 'normal',
       py: 3,
     },
@@ -84,7 +84,7 @@ export default {
       fontWeight: 'bold',
       fontSize: 18,
       lineHeight: '30px',
-      color: '#0F2137',
+      color: '#DEDEDE',
     },
     heroSecondary: {
       color: 'text_secondary',
@@ -98,7 +98,7 @@ export default {
       fontWeight: '500',
       lineHeight: '60px',
       letterSpacing: '-1.5px',
-      color: '#0F2137',
+      color: '#DEDEDE',
     },
     muted: {
       lineHeight: '26px',

@@ -7,7 +7,7 @@ import { IoMdClose, IoMdMenu } from 'react-icons/io';
 import { Link as ScrollLink } from 'react-scroll';
 import menuItems from './header.data';
 import Logo from 'components/logo';
-import logoDark from 'assets/logo-dark.svg';
+import logoDark from 'assets/logo-dark.png';
 
 const MobileDrawer = () => {
   const { state, dispatch } = useContext(DrawerContext);

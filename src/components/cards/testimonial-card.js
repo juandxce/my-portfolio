@@ -35,7 +35,7 @@ const styles = {
       fontSize: '16px',
       lineHeight: 1.87,
       color: 'white',
-      textShadow: '2px 2px 1px #343D48',
+      textShadow: '1px 1px 1px #333',
     },
   },
   fullText: {
@@ -69,7 +69,7 @@ const styles = {
     zIndex: 1,
     h3: {
       m: 0,
-      textShadow: '1px 1px 1px #343D48',
+      textShadow: '1px 1px 1px #333',
       color: 'white',
       fontSize: '17px',
       fontWeight: 600,
@@ -77,7 +77,7 @@ const styles = {
     },
     p: {
       m: 0,
-      textShadow: '2px 2px 1px #343D48',
+      textShadow: '1px 1px 1px #333',
       color: 'white',
       lineHeight: 1,
       fontSize: '14px',

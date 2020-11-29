@@ -37,7 +37,7 @@ const styles = {
   },
   content: {
     h3: {
-      color: '#0F2137',
+      color: '#ed911a',
       fontSize: '18px',
       lineHeight: 1,
       fontWeight: 700,
@@ -45,7 +45,7 @@ const styles = {
     },
     p: {
       fontSize: '15px',
-      color: '#343D48',
+      color: '#dedede',
       lineHeight: 1.73,
     },
   },

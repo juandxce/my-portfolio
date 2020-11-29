@@ -59,7 +59,7 @@ const Banner = () => {
         />
 
         <Image sx={styles.logo} src={logoImage} alt="logo image" />
-        <Heading as="h2">Juandxce, a full stack developer that will help your company reach the sky</Heading>
+        <Heading as="h2">I'm <span style={{color: "#ed4556"}}>Juandxce</span>, a full stack developer that will help your company reach the sky</Heading>
       </Container>
     </Box>
   );
@@ -129,9 +129,10 @@ const bannerAnim3 = keyframes`
 const styles = {
   banner: {
     overflow: 'hidden',
-    backgroundColor: '#F9FBFD',
+    backgroundColor: 'rgba(255,255,255,.3)',
     textAlign: 'center',
     pt: ['110px', null, null, null, '130px'],
+    pb: ['110px', null, null, null, '20px'],
     h2: {
       fontSize: ['28px', null, null, '32px', '38px', '48px', '64px'],
       lineHeight: 1.25,
@@ -156,6 +157,9 @@ const styles = {
       position: 'absolute',
       display: ['none', null, null, null, 'block'],
     },
+    h2: {
+      color: 'orange',
+    }
   },
   bannerIcon1: {
     top: '10%',

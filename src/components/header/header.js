@@ -6,7 +6,7 @@ import Logo from 'components/logo';
 import { DrawerProvider } from 'contexts/drawer/drawer.provider';
 import MobileDrawer from './mobileDrawer';
 import menuItems from './header.data';
-import logoDark from 'assets/logo-dark.svg';
+import logoDark from 'assets/logo-dark.png';
 
 export default function Header({ className }) {
   return (
@@ -49,6 +49,7 @@ const styles = {
     left: 0,
     backgroundColor: 'transparent',
     transition: 'all 0.4s ease',
+    backgroundColor: '#333',
 
     '&.sticky': {
       backgroundColor: 'background',
@@ -72,7 +73,7 @@ const styles = {
     },
     navLink: {
       fontSize: '16px',
-      color: '#02073E',
+      color: '#eee',
       fontWeight: '400',
       cursor: 'pointer',
       lineHeight: '1.2',

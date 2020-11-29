@@ -17,7 +17,7 @@ const styles = {
     textAlign: 'center',
     mb: ['60px', null, null, null, '60px', null, '80px'],
     h3: {
-      color: '#0F2137',
+      color: '#ed911a',
       fontSize: ['23px', null, null, '30px'],
       fontWeight: 700,
       letterSpacing: '-1.5px',
@@ -27,7 +27,7 @@ const styles = {
     p: {
       lineHeight: 1,
       fontSize: '18px',
-      color: '#858B91',
+      color: '#C9CFD5',
     },
   },
 };

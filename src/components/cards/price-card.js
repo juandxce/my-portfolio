@@ -69,7 +69,7 @@ const styles = {
       li: {
         display: 'flex',
         alignItems: 'flex-start',
-        color: '#343D48',
+        color: '#dedede',
         fontSize: '16px',
         lineHeight: '26px',
         width: '100%',
@@ -102,7 +102,7 @@ const styles = {
       mb: ['20px', null, '0'],
       h3: {
         lineHeight: 1,
-        color: '#0F2137',
+        color: '#ed911a',
         fontSize: '22px',
         fontWeight: 700,
         letterSpacing: '-0.55px',
@@ -142,7 +142,7 @@ const styles = {
       p: {
         lineHeight: 1,
         fontSize: '16px',
-        color: '#343D48',
+        color: '#dedede',
         mb: '10px',
       },
     },

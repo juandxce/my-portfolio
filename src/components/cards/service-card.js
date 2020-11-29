@@ -12,9 +12,6 @@ const ServiceCard = ({ image, text, heading, path }) => {
       <Box sx={styles.content}>
         <Heading as="h3">{heading}</Heading>
         <Text as="p">{text}</Text>
-        <Link sx={styles.link} path={path}>
-          Learn More <Image src={arrowAngle} alt="angle icon" />
-        </Link>
       </Box>
     </Box>
   );
@@ -35,7 +32,7 @@ const styles = {
     ml: ['0', null, null, '30px'],
     mt: ['20px', null, null, '0px'],
     h3: {
-      color: '#0F2137',
+      color: '#ed911a',
       fontWeight: 700,
       fontSize: '18px',
       lineHeight: 1,
@@ -43,18 +40,9 @@ const styles = {
     p: {
       fontSize: '16px',
       lineHeight: 1.87,
-      color: '#343D48',
+      color: '#dedede',
       mt: '20px',
       mb: '20px',
-    },
-  },
-  link: {
-    color: '#3183FF',
-    fontSize: '16px',
-    fontWeight: 500,
-    display: 'inline-block',
-    img: {
-      ml: '5px',
     },
   },
 };

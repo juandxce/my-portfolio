@@ -1,10 +1,7 @@
 /** @jsx jsx */
 import React from 'react';
 import { jsx, Box, Text, Container } from 'theme-ui';
-import { Link } from 'components/link';
 import { Link as ScrollLink } from 'react-scroll';
-import Logo from 'components/logo';
-import logoLight from 'assets/logo-light.svg';
 export default function Footer() {
   return (
     <Box as="footer" sx={styles.footer}>
@@ -16,7 +13,6 @@ export default function Footer() {
             flexDirection: ['column', null, null, null, null, 'row'],
           }}
         >
-          <Logo image={logoLight} />
           <Text
             as="p"
             sx={{
@@ -93,7 +89,7 @@ export default function Footer() {
 const styles = {
   footer: {
     py: ['40px', null, null, null, null, '30px', '40px'],
-    backgroundColor: '#020718',
+    backgroundColor: '#0a0a0a',
     position: 'relative',
     '&::before': {
       content: '""',

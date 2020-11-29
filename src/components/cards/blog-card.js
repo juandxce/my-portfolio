@@ -93,7 +93,7 @@ const styles = {
   content: {
     h3: {
       fontSize: '18px',
-      color: '#0F2137',
+      color: '#ed911a',
       lineHeight: 1.67,
       fontWeight: 700,
       mt: '20px',
@@ -105,13 +105,13 @@ const styles = {
     p: {
       fontSize: '16px',
       lineHeight: 1.87,
-      color: '#0F2137',
+      color: '#ed911a',
       opacity: 0.6,
       mb: '15px',
     },
   },
   linkLabel: {
-    color: '#3183FF',
+    color: '#ed911a',
     fontSize: '16px',
     fontWeight: '500',
     img: {

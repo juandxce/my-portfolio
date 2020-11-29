@@ -17,7 +17,7 @@ const Pricing = () => {
           title="About Me"
           text={`I'm Juandxce, a FullStak developer from Mexico, with 4 years of experience developing first-class software for the web, mainly focusing on the frontend.`}
         />
-        <Box>
+        <Box sx={styles.socialMediaContainer}>
           <Link
             sx={styles.socialMediaLink}
            href="https://www.linkedin.com/in/juandxce" target="_blank">
@@ -107,7 +107,7 @@ const styles = {
     button: {
       backgroundColor: "rgba(0,0,0,0)",
       borderRadius: "5px",
-      color: "#0F2137",
+      color: "#ed911a",
       letterSpacing: "-0.24px",
       fontSize: "16px",
       fontWeight: 500,
@@ -145,9 +145,22 @@ const styles = {
       },
     },
   },
+  socialMediaContainer: {
+    display: "flex",
+  },
   socialMediaLink: {
     fontSize: '2.5em',
+    color: '#fafafa',
     transition: 'all 300ms linear',
+    background: '#666',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '100%',
+    padding: 0,
+    width: '4rem',
+    height: '4rem',
+    marginRight: '2rem',
     "&:hover": {
       color: 'orange'
     },
