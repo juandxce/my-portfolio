@@ -18,7 +18,7 @@ export default function Accordion({ items, ...props }) {
   const closeIcon = <FaCaretRight />;
   return (
     <BaseAccordion
-      stateReducer={combineReducers(single, preventClose)}
+      stateReducer={combineReducers(single)}
       {...props}
     >
       {({ openIndexes, handleItemClick }) => (

@@ -107,11 +107,6 @@ export const AccordionItem = ({ isOpen, children, ...rest }) => (
   </div>
 );
 
-export const preventClose = (state, changes) =>
-  changes.type === 'closing' && state.openIndexes.length < 2
-    ? { ...changes, openIndexes: state.openIndexes }
-    : changes;
-
 export const single = (state, changes) =>
   changes.type === 'opening'
     ? { ...changes, openIndexes: changes.openIndexes.slice(-1) }

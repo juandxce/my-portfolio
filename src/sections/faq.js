@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Flex, Text, Heading } from 'theme-ui';
+import { Box, Container, Flex } from 'theme-ui';
 import { Link } from 'components/link';
 import BlockTitle from 'components/block-title';
 import Accordion from 'components/accordion/accordion';
@@ -7,43 +7,28 @@ import Accordion from 'components/accordion/accordion';
 const accordionData = [
   {
     isExpanded: false,
-    title: 'How long does the application take?',
+    title: 'What is your location/timezone?',
     contents: (
       <div>
-        For our recent trip to S.A. I booked several accommodation thru SA
-        Places. I just wanted to tell you that everything worked out perfectly
-        with all the bookings and also your booking was very quick and
-        professional. I hope I have the opportunity to re-visit South Africa
-        soon, I will then make my bookings with your company again. I will also
-        recommend
+        I'm located in Mexico City in the GMT-6 timezone, but I'm pretty flexible about the work schedule.
       </div>
     ),
   },
   {
     isExpanded: false,
-    title: 'Can I make payment outside of Hong Kong?',
+    title: 'What is your notice time?',
     contents: (
       <div>
-        For our recent trip to S.A. I booked several accommodation thru SA
-        Places. I just wanted to tell you that everything worked out perfectly
-        with all the bookings and also your booking was very quick and
-        professional. I hope I have the opportunity to re-visit South Africa
-        soon, I will then make my bookings with your company again. I will also
-        recommend
+        I'd need 2 weeks to be able to leave everything in place before starting a new role.
       </div>
     ),
   },
   {
     isExpanded: false,
-    title: 'How do I get the payment complete?',
+    title: 'Are you eligible to work in the US?',
     contents: (
       <div>
-        For our recent trip to S.A. I booked several accommodation thru SA
-        Places. I just wanted to tell you that everything worked out perfectly
-        with all the bookings and also your booking was very quick and
-        professional. I hope I have the opportunity to re-visit South Africa
-        soon, I will then make my bookings with your company again. I will also
-        recommend
+        No, I would need visa sponsorship if that was a requirement.
       </div>
     ),
   },

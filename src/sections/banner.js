@@ -1,8 +1,6 @@
 import React from 'react';
 import { Box, Container, Image, Heading } from 'theme-ui';
 import { keyframes } from '@emotion/core';
-import logoImage from 'assets/banner-logo.png';
-import bannerImage from 'assets/banner-mockup.png';
 import bannerIcon1 from 'assets/banner-icon-1-1.svg';
 import bannerIcon2 from 'assets/banner-icon-1-2.svg';
 import bannerIcon3 from 'assets/banner-icon-1-3.svg';
@@ -58,8 +56,7 @@ const Banner = () => {
           src={bannerIcon7}
         />
 
-        <Image sx={styles.logo} src={logoImage} alt="logo image" />
-        <Heading as="h2">I'm <span style={{color: "#ed4556"}}>Juandxce</span>, a full stack developer that will help your company reach the sky</Heading>
+        <Heading as="h2">I'm <span style={{color: "#ed4556", textShadow: '1px 1px 1px #333'}}>Juandxce</span>, a full stack developer that will help your company reach the sky</Heading>
       </Container>
     </Box>
   );
