@@ -38,7 +38,7 @@ export default function Footer() {
           <ScrollLink
             activeClass="active"
             sx={styles.nav.navLink}
-            to={'pricing'}
+            to={'about'}
             spy={true}
             smooth={true}
             offset={-70}

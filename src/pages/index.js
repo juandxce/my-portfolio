@@ -6,7 +6,7 @@ import SEO from 'components/seo';
 import Layout from 'components/layout';
 import Banner from 'sections/banner';
 import Services from 'sections/services';
-import Pricing from 'sections/pricing';
+import About from 'sections/about';
 import Testimonials from 'sections/testimonials';
 import Blogs from 'sections/blogs';
 import FAQ from 'sections/faq';
@@ -18,7 +18,7 @@ export default function IndexPage() {
         <Layout>
           <SEO title="Juandxce" />
           <Banner />
-          <Pricing />
+          <About />
           <Testimonials />
           <Services />
           <Blogs />

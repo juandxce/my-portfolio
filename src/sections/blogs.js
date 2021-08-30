@@ -9,12 +9,12 @@ import blogImage2 from 'assets/blog-1-2.png';
 import blogImage3 from 'assets/blog-1-3.png';
 import blogImage4 from 'assets/blog-1-4.png';
 
-const Blogs = () => {
+const HireMe = () => {
   return (
-    <Box as="section" id="news" sx={styles.blogs}>
+    <Box as="section" id="news" sx={styles.hireMe}>
       <Container>
         <BlockTitle
-          title="Hire a Juandxce"
+          title="Hire THE Juandxce"
           text={`You have a long-term project/position that you'd like to hire me for?
           The current bid for me is 115kUSD/year.
           Send me a message @ juandxce@gmail.com and if we match I'd like to join your journey.`}
@@ -24,10 +24,10 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default HireMe;
 
 const styles = {
-  blogs: {
+  hireMe: {
     pt: ['80px', null, null, null, '80px', null, '100px'],
     pb: ['40px', null, null, null, '140px', null, '100px'],
   },

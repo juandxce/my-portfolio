@@ -56,7 +56,7 @@ const Banner = () => {
           src={bannerIcon7}
         />
 
-        <Heading as="h2">I'm <span style={{color: "#ed4556", textShadow: '1px 1px 1px #333'}}>Juandxce</span>, a full stack developer that will help your company reach the sky</Heading>
+        <Heading as="h2">I'm <span style={{ color: "#ed4556", textShadow: '1px 1px 1px #333' }}>Juandxce</span>, the developer that will help your company reach the sky</Heading>
       </Container>
     </Box>
   );
@@ -156,6 +156,8 @@ const styles = {
     },
     h2: {
       color: 'orange',
+      zIndex: 10,
+      position: 'relative'
     }
   },
   bannerIcon1: {
