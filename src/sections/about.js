@@ -32,14 +32,14 @@ const AboutMe = (props) => {
   return (
     <Box as="section" id="about" sx={styles.aboutMe}>
       <Container>
-        <div style={{ display: "flex" }}>
-          <div style={{ width: "50%" }}>
+        <div style={{ display: "flex", position: "relative", zIndex: 1 }}>
+          <div style={{ width: "50%", position: "relative", zIndex: 1 }}>
             <Heading as="h2">Skills</Heading>
             <Flex>
               <Box p={2}>
                 <Text>I'm comfortable (and enjoy working with) with: </Text>
                 <ul>
-                  <li>Javascript (ES6)</li>
+                  <li>JavaScript (ES6)</li>
                   <li>React.js</li>
                   <li>Angular (2-5)</li>
                   <li>ionic framework (2-4)</li>
@@ -71,7 +71,7 @@ const AboutMe = (props) => {
               </Box>
             </Flex>
           </div>
-          <div style={{ width: "50%" }}>
+          <div style={{ width: "50%", overflow: "visible" }}>
             {_document && <DynamicComponent />}
           </div>
         </div>

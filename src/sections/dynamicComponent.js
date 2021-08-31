@@ -24,7 +24,12 @@ function DynamicComponent() {
 
   return (
     <div
-      style={{ width: "50vw", height: "100vh", position: "relative" }}
+      style={{
+        width: "150%",
+        height: "100vh",
+        position: "absolute",
+        left: 0,
+      }}
       ref={ref}
     >
       {_document && (
@@ -76,10 +81,10 @@ function DynamicComponent() {
             width={elem.width}
             wheelZoom={true}
             zoomMax={1.5}
-            zoomMin={.7}
+            zoomMin={0.7}
             zoomStep={0.01}
             tags={[
-              { value: "Javascript", weight: 30 },
+              { value: "JavaScript", weight: 30 },
               { value: "React", weight: 30 },
               { value: "Redux", weight: 20 },
               { value: "Redux-saga", weight: 20 },
