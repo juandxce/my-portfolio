@@ -77,7 +77,7 @@ const AboutMe = (props) => {
         </div>
         <BlockTitle
           title="About Me"
-          text={`Hi, I'm Juandxce. I'm a Full Stack developer, born in Mexico, I've developed first-class software for the web during the last ${YOE} years (mainly focused on the frontend).`}
+          text={`I'm Juandxce, Full Stack developer born in Mexico, I've developed first-class software for the web during the last ${YOE} years (mainly focused on the frontend).`}
         />
         <Box sx={styles.socialMediaContainer}>
           <Tooltip title="LinkedIn">
