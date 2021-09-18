@@ -4,14 +4,8 @@ import SwiperCore, { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import BlockTitle from 'components/block-title';
 import TestimonialsCard from 'components/cards/testimonial-card';
-import testimonialsImage1 from 'assets/testimonial-1-1.png';
-import testimonialsImage2 from 'assets/testimonial-1-2.png';
-import testimonialsImage3 from 'assets/testimonial-1-3.png';
-import testimonialsImage4 from 'assets/testimonial-1-4.png';
-import testimonialsImage5 from 'assets/testimonial-1-5.png';
-import testimonialsImage6 from 'assets/testimonial-1-6.png';
 import placeholderImage from 'assets/portfolioimages/placeholderwork.jpg';
-import AAshop from 'assets/portfolioimages/AAshop.jpg';
+import AAshop from 'assets/portfolioimages/aashop.png';
 import cuda from 'assets/portfolioimages/cuda.jpg';
 import sophia from 'assets/portfolioimages/sophia.jpg';
 import tajamlandingpage from 'assets/portfolioimages/tajamlandingpage.jpg';
@@ -41,7 +35,7 @@ const TESTIMONIALS_DATA = [
       backgroundImage: AAshop,
       text: 'AAshop from PSD to HTML responsive site.',
       name: 'AAshop',
-      url: "#",
+      url: "https://user-images.githubusercontent.com/23223305/132113968-900f6f2a-2db8-47cd-9dc8-8bcfb25f9c67.png",
     },
     {
       backgroundImage: siemens,
@@ -56,19 +50,19 @@ const TESTIMONIALS_DATA = [
       backgroundImage: sophia,
       text: 'Sophia shop from PSD to HTML responsive site.',
       name: 'Sophia Shop',
-      url: "#",
+      url: "https://raw.githubusercontent.com/juandxce/Shophia-psd-to-html/master/images/Shopia-design.jpg",
     },
     {
       backgroundImage: tajamlandingpage,
       text: 'Tajam landing page from PSD to HTML responsive site.',
       name: 'Tajam landing page',
-      url: "#",
+      url: "https://cdn.rawgit.com/juandxce/Tajem-landing-page/9376c89c/index.html",
     },
     {
       backgroundImage: cuda,
       text: 'Cuda PSD to HTML responsive site.',
       name: 'Cuda',
-      url: "#",
+      url: "https://cdn.rawgit.com/juandxce/cuda-single-page/55918b21/index.html",
     },
   ],
   [
@@ -88,7 +82,7 @@ const TESTIMONIALS_DATA = [
       backgroundImage: applaunch,
       text: 'Applaunch landing page from PSD to responsive HTML.',
       name: 'Applaunch',
-      url: "#",
+      url: "https://rawgit.com/juandxce/appLaunchTemplate/master/index.html",
     },
   ],
   [
@@ -148,10 +142,6 @@ const Testimonials = () => {
         slidesPerView: 2,
         spaceBetween: 20,
       },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
       1200: {
         slidesPerView: 4,
         spaceBetween: 20,
@@ -173,7 +163,7 @@ const Testimonials = () => {
                 image={image}
                 text={text}
                 name={name}
-                key={name}
+                key={_index}
                 username={username}
                 url={url}
               />
