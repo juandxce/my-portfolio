@@ -15,7 +15,7 @@ export default BlockTitle;
 const styles = {
   blockTitle: {
     textAlign: 'center',
-    mb: ['60px', null, null, null, '60px', null, '80px'],
+    mb: ['30px', null, null, null, '30px', null, '40px'],
     h3: {
       color: '#ed911a',
       fontSize: ['23px', null, null, '30px'],

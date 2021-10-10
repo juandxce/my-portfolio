@@ -32,49 +32,6 @@ const AboutMe = (props) => {
   return (
     <Box as="section" id="about" sx={styles.aboutMe}>
       <Container>
-        <div style={{ display: "flex", position: "relative", zIndex: 1 }}>
-          <div style={{ width: "50%", position: "relative", zIndex: 1 }}>
-            <Heading as="h2">Skills</Heading>
-            <Flex>
-              <Box p={2}>
-                <Text>I'm comfortable (and enjoy working with) with: </Text>
-                <ul>
-                  <li>JavaScript (ES6)</li>
-                  <li>React.js</li>
-                  <li>Angular (2-5)</li>
-                  <li>ionic framework (2-4)</li>
-                  <li>Bootstrap</li>
-                  <li>Material UI</li>
-                  <li>Responsive Web Design</li>
-                  <li>Redux / Redux-saga</li>
-                  <li>HTML</li>
-                  <li>CSS/SASS</li>
-                  <li>Firebase</li>
-                  <li>Google Cloud Platform</li>
-                  <li>Nodejs</li>
-                  <li>Express</li>
-                  <li>GraphQL (Apollo)</li>
-                  <li>
-                    Non relational databases ( PouchDB, CouchDB, Mongodb,
-                    firestore)
-                  </li>
-                </ul>
-              </Box>
-              <Box p={2}>
-                <Text>And know:</Text>
-                <ul>
-                  <li>Angularjs</li>
-                  <li>JQuery</li>
-                  <li>(some) SQL (MySQL)</li>
-                  <li>(some) PHP</li>
-                </ul>
-              </Box>
-            </Flex>
-          </div>
-          <div style={{ width: "50%", overflow: "visible" }}>
-            {_document && <DynamicComponent />}
-          </div>
-        </div>
         <BlockTitle
           title="About Me"
           text={`I'm Juandxce, a Full Stack developer born in Mexico. I've developed first-class software for the web during the last ${YOE} years (mainly focusing on the frontend).`}
@@ -118,6 +75,51 @@ const AboutMe = (props) => {
             </Link>
           </Tooltip>
         </Box>
+        <div style={{ display: "flex", position: "relative", zIndex: 1 }}>
+          <div sx={styles.innerHalf}>
+            <Heading sx={styles.skills} as="h2">
+              Skills
+            </Heading>
+            <Flex>
+              <Box p={2}>
+                <Text>I'm comfortable (and enjoy working with) with: </Text>
+                <ul>
+                  <li>JavaScript (ES6)</li>
+                  <li>React.js</li>
+                  <li>Angular (2-5)</li>
+                  <li>ionic framework (2-4)</li>
+                  <li>Bootstrap</li>
+                  <li>Material UI</li>
+                  <li>Responsive Web Design</li>
+                  <li>Redux / Redux-saga</li>
+                  <li>HTML</li>
+                  <li>CSS/SASS</li>
+                  <li>Firebase</li>
+                  <li>Google Cloud Platform</li>
+                  <li>Nodejs</li>
+                  <li>Express</li>
+                  <li>GraphQL (Apollo)</li>
+                  <li>
+                    Non relational databases ( PouchDB, CouchDB, Mongodb,
+                    firestore)
+                  </li>
+                </ul>
+              </Box>
+              <Box p={2}>
+                <Text>And know:</Text>
+                <ul>
+                  <li>Angularjs</li>
+                  <li>JQuery</li>
+                  <li>(some) SQL (MySQL)</li>
+                  <li>(some) PHP</li>
+                </ul>
+              </Box>
+            </Flex>
+          </div>
+          <div style={{ width: "50%", overflow: "visible" }}>
+            {_document && <DynamicComponent />}
+          </div>
+        </div>
       </Container>
     </Box>
   );
@@ -148,6 +150,14 @@ const styles = {
   aboutMe: {
     pt: ["80px", null, null, null, "80px", null, "140px"],
     pb: ["80px", null, null, null, "80px", "100px", "140px"],
+  },
+  skills: {
+    marginTop: "30px",
+  },
+  innerHalf: {
+    width: "50%",
+    position: "relative",
+    zIndex: 1,
   },
   btnWrap: {
     width: "302px",
