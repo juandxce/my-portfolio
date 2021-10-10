@@ -27,8 +27,8 @@ const accordionData = [
     title: "What is your location/timezone?",
     contents: (
       <div>
-        I'm located in Mexico City in the GMT-6 timezone, and I'm pretty
-        flexible with working hours.
+        I'm located in Mexico City (GMT-6 timezone), and I'm flexible about
+        working hours.
       </div>
     ),
   },
@@ -37,8 +37,8 @@ const accordionData = [
     title: "What is your notice time?",
     contents: (
       <div>
-        I'd need 2 weeks to be able to leave everything in place before starting
-        a new role.
+        I need 2 weeks to be able to leave everything in place before starting a
+        new role.
       </div>
     ),
   },
@@ -48,7 +48,8 @@ const accordionData = [
     contents: (
       <div>
         No, I would need visa sponsorship if that was a requirement (but we are
-        in {new Date().getFullYear()} aren't we?).
+        in {new Date().getFullYear()} aren't we?). I can work as an
+        international contractor instead.
       </div>
     ),
   },

@@ -1,5 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
 import TagsCanvas from "react-tags-canvas";
+import { useBreakpoint } from "styled-breakpoints/react-styled";
+import { up } from "styled-breakpoints";
+import styled from "styled-components";
+
+const StyledTagsWrapper = styled.div`
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+
+  ${up("lg")} {
+    width: 150%;
+  }
+`;
 
 function DynamicComponent() {
   const [_document, set_document] = React.useState(null);
@@ -11,27 +25,18 @@ function DynamicComponent() {
   const ref = useRef(null);
   const [elem, setElem] = useState({});
 
+  const isLargeDevice = useBreakpoint(up("lg"));
+
   useEffect(() => {
-    console.log("refrefref", ref);
     setElem({
       height: ref.current.clientHeight,
       width: ref.current.clientWidth,
     });
   }, [ref]);
-  useEffect(() => {
-    console.log("elemelemelem", elem);
-  }, [elem]);
 
   return (
-    <div
-      style={{
-        width: "150%",
-        height: "100vh",
-        position: "absolute",
-        left: 0,
-      }}
-      ref={ref}
-    >
+    <StyledTagsWrapper ref={ref}>
+      {/* There are 2 TagsCanvas so that 1 spins faster; The second one spins on top of the first */}
       {_document && (
         <TagsCanvas
           textColour="#ed911a"
@@ -79,7 +84,8 @@ function DynamicComponent() {
             textHeight={100}
             height={elem.height}
             width={elem.width}
-            wheelZoom={true}
+            wheelZoom={isLargeDevice && true}
+            pinchZoom={true}
             zoomMax={1.5}
             zoomMin={0.7}
             zoomStep={0.01}
@@ -109,7 +115,7 @@ function DynamicComponent() {
           />
         </div>
       )}
-    </div>
+    </StyledTagsWrapper>
   );
 }
 

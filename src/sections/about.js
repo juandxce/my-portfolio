@@ -1,40 +1,56 @@
 import React, { useState, useEffect } from "react";
 import { keyframes } from "@emotion/core";
-import {
-  Box,
-  Container,
-  Grid,
-  Button,
-  Flex,
-  Text,
-  Heading,
-  Link,
-} from "theme-ui";
+import { Box, Container, Flex, Text, Heading, Link } from "theme-ui";
 import BlockTitle from "components/block-title";
-import PriceCard from "components/cards/price-card";
-import priceIcon1 from "assets/price-user-1-1.svg";
-import priceIcon2 from "assets/price-user-1-2.svg";
-import { IconButton } from "theme-ui";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import { HiDocumentDownload } from "react-icons/hi";
 import Tooltip from "@material-ui/core/Tooltip";
 import dynamic from "next/dynamic";
+import { up } from "styled-breakpoints";
+import styled from "styled-components";
+
 const DynamicComponent = dynamic(() => import("./dynamicComponent"), {
   ssr: false,
 });
+
+const SkillsWrap = styled.div`
+  width: 100%;
+
+  ${up("lg")} {
+    width: 50%;
+    position: relative;
+    z-index: 1;
+  }
+`;
+
+const CanvasWrap = styled.div`
+  position: absolute;
+  overflow: visible;
+  margin-top: 250px;
+  width: 75vw;
+  right: 0;
+
+  ${up("lg")} {
+    margin-top: 0;
+    position: initial;
+    width: 50%;
+  }
+`;
 
 const AboutMe = (props) => {
   const [_document, set_document] = React.useState(null);
   React.useEffect(() => {
     set_document(document);
   }, []);
+
   const YOE = new Date().getFullYear() - 2016;
   return (
     <Box as="section" id="about" sx={styles.aboutMe}>
       <Container>
         <BlockTitle
           title="About Me"
-          text={`I'm Juandxce, a Full Stack developer born in Mexico. I've developed first-class software for the web during the last ${YOE} years (mainly focusing on the frontend).`}
+          text={`I'm Juandxce, a Full Stack developer. I've developed first-class software for the web during the last ${YOE} years (mainly focusing on the frontend).
+          I enjoy taking long walks and meeting new people/discovering new exciting places.`}
         />
         <Box sx={styles.socialMediaContainer}>
           <Tooltip title="LinkedIn">
@@ -75,8 +91,15 @@ const AboutMe = (props) => {
             </Link>
           </Tooltip>
         </Box>
-        <div style={{ display: "flex", position: "relative", zIndex: 1 }}>
-          <div sx={styles.innerHalf}>
+        <div
+          style={{
+            display: "flex",
+            position: "relative",
+            zIndex: 1,
+            position: "relative",
+          }}
+        >
+          <SkillsWrap>
             <Heading sx={styles.skills} as="h2">
               Skills
             </Heading>
@@ -115,10 +138,8 @@ const AboutMe = (props) => {
                 </ul>
               </Box>
             </Flex>
-          </div>
-          <div style={{ width: "50%", overflow: "visible" }}>
-            {_document && <DynamicComponent />}
-          </div>
+          </SkillsWrap>
+          <CanvasWrap>{_document && <DynamicComponent />}</CanvasWrap>
         </div>
       </Container>
     </Box>
@@ -150,14 +171,10 @@ const styles = {
   aboutMe: {
     pt: ["80px", null, null, null, "80px", null, "140px"],
     pb: ["80px", null, null, null, "80px", "100px", "140px"],
+    overflow: "hidden",
   },
   skills: {
     marginTop: "30px",
-  },
-  innerHalf: {
-    width: "50%",
-    position: "relative",
-    zIndex: 1,
   },
   btnWrap: {
     width: "302px",

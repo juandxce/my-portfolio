@@ -143,7 +143,7 @@ const styles = {
       color: "#02073E",
       fontWeight: 700,
       width: "100%",
-      maxWidth: ["100%", null, null, "55%", "500px", "740px", "1051px"],
+      maxWidth: ["100%", null, null, "80%", "70%", "740px", "1051px"],
       mx: "auto",
       mt: "30px",
       mb: ["40px", null, null, "65px"],

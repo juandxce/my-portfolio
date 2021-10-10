@@ -29,6 +29,8 @@
     "react-stickynode": "^3.0.3",
     "react-tags-canvas": "^1.0.1",
     "react-waypoint": "^9.0.2",
+    "styled-breakpoints": "^10.0.1",
+    "styled-components": "^5.3.1",
     "swiper": "^6.3.1",
     "theme-ui": "^0.3.1",
     "typeface-dm-sans": "^1.1.3"
