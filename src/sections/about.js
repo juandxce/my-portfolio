@@ -38,6 +38,7 @@ const CanvasWrap = styled.div`
   margin-top: 250px;
   width: 75vw;
   right: 0;
+  z-index: -1;
 
   ${up("lg")} {
     margin-top: 0;
