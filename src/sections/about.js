@@ -16,11 +16,22 @@ const DynamicComponent = dynamic(() => import("./dynamicComponent"), {
 
 const SkillsWrap = styled.div`
   width: 100%;
+  margin-bottom: 250px;
+
+  .first-skills-container {
+    width: 90%;
+  }
 
   ul {
     padding-left: 20px;
   }
 
+  ${up("md")} {
+    .first-skills-container {
+      width: auto;
+    }
+    margin-bottom: 0;
+  }
   ${up("lg")} {
     width: 50%;
     position: relative;
@@ -33,12 +44,18 @@ const SkillsWrap = styled.div`
 `;
 
 const CanvasWrap = styled.div`
+  z-index: -1;
   position: absolute;
   overflow: visible;
-  margin-top: 250px;
-  width: 75vw;
   right: 0;
-  z-index: -1;
+  width: 100vw;
+  bottom: 350px;
+
+  ${up("md")} {
+    width: 50%;
+    width: 70vw;
+    margin-top: 250px;
+  }
 
   ${up("lg")} {
     margin-top: 0;
@@ -116,7 +133,7 @@ const AboutMe = (props) => {
               Skills
             </Heading>
             <Flex>
-              <Box p={isLargeDevice && 2}>
+              <Box className="first-skills-container" p={isLargeDevice && 2}>
                 <Text>I'm comfortable (and enjoy working with) with: </Text>
                 <ul>
                   <li>JavaScript (ES6)</li>
@@ -255,6 +272,7 @@ const styles = {
     padding: 0,
     width: "4rem",
     height: "4rem",
+    minWidth: "4rem",
     marginRight: "2rem",
     "&:hover": {
       background: "orange",

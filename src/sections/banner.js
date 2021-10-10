@@ -8,64 +8,86 @@ import bannerIcon4 from "assets/banner-icon-1-4.svg";
 import bannerIcon5 from "assets/banner-icon-1-5.svg";
 import bannerIcon6 from "assets/banner-icon-1-6.svg";
 import bannerIcon7 from "assets/dot-pattern.svg";
+import styled from "styled-components";
+import { up } from "styled-breakpoints";
+
+const StyledWrapper = styled(Box)`
+  .dxce-wrapper {
+    display: inline-flex;
+    align-items: center;
+    color: #ed4556;
+    text-shadow: 1px 1px 1px #333;
+    font-family: monospace;
+  }
+
+  .dxce-tag {
+    font-size: 40px;
+
+    ${up("lg")} {
+      font-size: 55px;
+    }
+  }
+`;
 
 const Banner = () => {
   return (
-    <Box as="section" id="banner" sx={styles.banner}>
-      <Container sx={styles.container}>
-        <Image
-          sx={styles.bannerIcon1}
-          className="bannerIcon"
-          alt="banner icon"
-          src={bannerIcon1}
-        />
-        <Image
-          sx={styles.bannerIcon2}
-          className="bannerIcon"
-          alt="banner icon"
-          src={bannerIcon2}
-        />
-        <Image
-          sx={styles.bannerIcon3}
-          className="bannerIcon"
-          alt="banner icon"
-          src={bannerIcon3}
-        />
-        <Image
-          sx={styles.bannerIcon4}
-          className="bannerIcon"
-          alt="banner icon"
-          src={bannerIcon4}
-        />
-        <Image
-          sx={styles.bannerIcon5}
-          className="bannerIcon"
-          alt="banner icon"
-          src={bannerIcon5}
-        />
-        <Image
-          sx={styles.bannerIcon6}
-          className="bannerIcon"
-          alt="banner icon"
-          src={bannerIcon6}
-        />
-        <Image
-          sx={styles.bannerIcon7}
-          className="bannerIcon"
-          alt="banner icon"
-          src={bannerIcon7}
-        />
+    <StyledWrapper>
+      <Box as="section" id="banner" sx={styles.banner}>
+        <Container sx={styles.container}>
+          <Image
+            sx={styles.bannerIcon1}
+            className="bannerIcon"
+            alt="banner icon"
+            src={bannerIcon1}
+          />
+          <Image
+            sx={styles.bannerIcon2}
+            className="bannerIcon"
+            alt="banner icon"
+            src={bannerIcon2}
+          />
+          <Image
+            sx={styles.bannerIcon3}
+            className="bannerIcon"
+            alt="banner icon"
+            src={bannerIcon3}
+          />
+          <Image
+            sx={styles.bannerIcon4}
+            className="bannerIcon"
+            alt="banner icon"
+            src={bannerIcon4}
+          />
+          <Image
+            sx={styles.bannerIcon5}
+            className="bannerIcon"
+            alt="banner icon"
+            src={bannerIcon5}
+          />
+          <Image
+            sx={styles.bannerIcon6}
+            className="bannerIcon"
+            alt="banner icon"
+            src={bannerIcon6}
+          />
+          <Image
+            sx={styles.bannerIcon7}
+            className="bannerIcon"
+            alt="banner icon"
+            src={bannerIcon7}
+          />
 
-        <Heading as="h2">
-          I'm{" "}
-          <span className="dxce-wrapper">
-            <span className="dxce-tag">&#60;</span>Juandxce/
-            <span className="dxce-tag">&#62;</span>
-          </span>
-          , the developer that will help your company reach the sky
-        </Heading>
-      </Container>
-    </Box>
+          <Heading as="h2">
+            I'm{" "}
+            <span className="dxce-wrapper">
+              <span className="dxce-tag">&#60;</span>Juandxce/
+              <span className="dxce-tag">&#62;</span>
+            </span>
+            , the developer that will help your company reach the sky
+          </Heading>
+        </Container>
+      </Box>
+    </StyledWrapper>
   );
 };
 
@@ -147,15 +169,6 @@ const styles = {
       mx: "auto",
       mt: "30px",
       mb: ["40px", null, null, "65px"],
-    },
-
-    ".dxce-wrapper": {
-      color: "#ed4556",
-      textShadow: "1px 1px 1px #333",
-      fontFamily: "monospace",
-    },
-    ".dxce-tag": {
-      fontSize: "55px",
     },
   },
   logo: {

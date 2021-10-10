@@ -46,6 +46,7 @@ function DynamicComponent() {
           shape="sphere"
           zoom={0.9}
           initial={[0.05, 0.05]}
+          noMouse={!isLargeDevice && true}
           noSelect
           textFont={null}
           textHeight={100}
@@ -79,6 +80,7 @@ function DynamicComponent() {
             shape="sphere"
             zoom={1}
             initial={[0.05, 0.05]}
+            noMouse={!isLargeDevice && true}
             noSelect
             textFont={null}
             textHeight={100}
