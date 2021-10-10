@@ -8,6 +8,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 import dynamic from "next/dynamic";
 import { up } from "styled-breakpoints";
 import styled from "styled-components";
+import { useBreakpoint } from "styled-breakpoints/react-styled";
 
 const DynamicComponent = dynamic(() => import("./dynamicComponent"), {
   ssr: false,
@@ -16,10 +17,18 @@ const DynamicComponent = dynamic(() => import("./dynamicComponent"), {
 const SkillsWrap = styled.div`
   width: 100%;
 
+  ul {
+    padding-left: 20px;
+  }
+
   ${up("lg")} {
     width: 50%;
     position: relative;
     z-index: 1;
+
+    ul {
+      padding-left: initial;
+    }
   }
 `;
 
@@ -44,6 +53,8 @@ const AboutMe = (props) => {
   }, []);
 
   const YOE = new Date().getFullYear() - 2016;
+  const isLargeDevice = useBreakpoint(up("lg"));
+
   return (
     <Box as="section" id="about" sx={styles.aboutMe}>
       <Container>
@@ -104,7 +115,7 @@ const AboutMe = (props) => {
               Skills
             </Heading>
             <Flex>
-              <Box p={2}>
+              <Box p={isLargeDevice && 2}>
                 <Text>I'm comfortable (and enjoy working with) with: </Text>
                 <ul>
                   <li>JavaScript (ES6)</li>
@@ -128,7 +139,7 @@ const AboutMe = (props) => {
                   </li>
                 </ul>
               </Box>
-              <Box p={2}>
+              <Box p={isLargeDevice && 2}>
                 <Text>And know:</Text>
                 <ul>
                   <li>Angularjs</li>

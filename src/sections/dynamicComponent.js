@@ -85,7 +85,6 @@ function DynamicComponent() {
             height={elem.height}
             width={elem.width}
             wheelZoom={isLargeDevice && true}
-            pinchZoom={true}
             zoomMax={1.5}
             zoomMin={0.7}
             zoomStep={0.01}
