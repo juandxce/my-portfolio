@@ -33,7 +33,7 @@ const SERVICES_DATA = [
   {
     image: serviceImage6,
     text: "Is your web platform starting to feel sluggish? Let's fix that!.",
-    heading: "Increase Performance",
+    heading: "Improve Performance",
     path: "#",
   },
   {
