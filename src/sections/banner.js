@@ -12,6 +12,8 @@ import styled from "styled-components";
 import { up } from "styled-breakpoints";
 
 const StyledWrapper = styled(Box)`
+  text-shadow: 2px 2px 8px #333;
+
   .dxce-wrapper {
     display: inline-flex;
     align-items: center;

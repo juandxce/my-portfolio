@@ -18,6 +18,7 @@ const styles = {
     mb: ['30px', null, null, null, '30px', null, '40px'],
     h3: {
       color: '#ed911a',
+      textShadow: "2px 2px 10px #222",
       fontSize: ['23px', null, null, '30px'],
       fontWeight: 700,
       letterSpacing: '-1.5px',
