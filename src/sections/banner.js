@@ -18,7 +18,7 @@ const StyledWrapper = styled(Box)`
     display: inline-flex;
     align-items: center;
     color: #ed4556;
-    text-shadow: 1px 1px 1px #333;
+    text-shadow: 3px 3px 8px #333;
     font-family: monospace;
   }
 

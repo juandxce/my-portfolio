@@ -47,7 +47,7 @@ const TESTIMONIALS_DATA = [
       backgroundImage: thrive,
       text: "Thrive Market sustainable ecommerce platform.",
       name: "Thrive Market",
-      url: "thrivemarket.com",
+      url: "https://thrivemarket.com/",
     },
     {
       backgroundImage: citibanamexBancanetMovil,

@@ -3,7 +3,7 @@ import { keyframes } from "@emotion/core";
 import { Box, Container, Flex, Text, Heading, Link } from "theme-ui";
 import BlockTitle from "components/block-title";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
-import { HiDocumentDownload } from "react-icons/hi";
+import { HiDocument } from "react-icons/hi";
 import Tooltip from "@material-ui/core/Tooltip";
 import dynamic from "next/dynamic";
 import { up } from "styled-breakpoints";
@@ -64,6 +64,27 @@ const CanvasWrap = styled.div`
   }
 `;
 
+const CV = styled.div`
+  font-family: sans-serif;
+  font-size: 12px;
+  position: absolute;
+  color: #666;
+  font-weight: bolder;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -45%);
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const TooltipExt = styled(Tooltip)`
+  position: relative;
+`;
+
 const AboutMe = (props) => {
   const [_document, set_document] = React.useState(null);
   React.useEffect(() => {
@@ -78,8 +99,8 @@ const AboutMe = (props) => {
       <Container>
         <BlockTitle
           title="About Me"
-          text={`I'm Juandxce, a Full Stack developer. I've developed first-class software for the web during the last ${YOE} years (mainly focusing on the frontend).
-          I enjoy taking long walks and meeting new people/discovering new exciting places.`}
+          text={`Juandxce: a Full Stack developer. I've developed first-class software for the web during the last ${YOE} years (mainly focusing on the frontend).
+          I enjoy taking long walks and meeting new people/discovering new exciting places while helping companies grow their business.`}
         />
         <Box sx={styles.socialMediaContainer}>
           <Tooltip title="LinkedIn">
@@ -110,15 +131,16 @@ const AboutMe = (props) => {
               <FaTwitter />
             </Link>
           </Tooltip>
-          <Tooltip title="Download CV">
+          <TooltipExt title="Download CV">
             <Link
               sx={styles.socialMediaLink}
-              href="juan_pablo_guzman_cv_developer.pdf"
-              download
+              href="https://docs.google.com/document/d/1G7_xbdpPiGmLJu6un8fe_Moc1MrGht9f3JBfbMy7p_A/edit?usp=sharing"
+              target="_blank"
             >
-              <HiDocumentDownload />
+              <CV>CV</CV>
+              <HiDocument />
             </Link>
-          </Tooltip>
+          </TooltipExt>
         </Box>
         <div
           style={{
@@ -138,12 +160,13 @@ const AboutMe = (props) => {
                 <ul>
                   <li>JavaScript (ES6)</li>
                   <li>React.js</li>
+                  <li>Redux / Redux-saga</li>
+                  <li>Typescript</li>
                   <li>Angular (2-5)</li>
                   <li>ionic framework (2-4)</li>
                   <li>Bootstrap</li>
                   <li>Material UI</li>
                   <li>Responsive Web Design</li>
-                  <li>Redux / Redux-saga</li>
                   <li>HTML</li>
                   <li>CSS/SASS</li>
                   <li>Firebase</li>
@@ -153,8 +176,10 @@ const AboutMe = (props) => {
                   <li>GraphQL (Apollo)</li>
                   <li>
                     Non relational databases ( PouchDB, CouchDB, Mongodb,
-                    firestore)
+                    firestore, FB real-time DB)
                   </li>
+                  <li>Cypress</li>
+                  <li>Jest</li>
                 </ul>
               </Box>
               <Box p={isLargeDevice && 2}>
@@ -162,8 +187,12 @@ const AboutMe = (props) => {
                 <ul>
                   <li>Angularjs</li>
                   <li>JQuery</li>
-                  <li>(some) SQL (MySQL)</li>
+                  <li>(some) SQL (MySQL and PostgreSQL)</li>
+                  <li>(some) Python</li>
                   <li>(some) PHP</li>
+                  <li>(some) C++</li>
+                  <li>(some) Jazmine</li>
+                  <li>(some) Mocha</li>
                 </ul>
               </Box>
             </Flex>
@@ -274,8 +303,15 @@ const styles = {
     height: "4rem",
     minWidth: "4rem",
     marginRight: "2rem",
+    boxShadow: "1px 2px 3px #222",
+    svg: {
+      transition: "all 300ms linear",
+    },
     "&:hover": {
       background: "orange",
+      svg: {
+        color: "#eee",
+      },
     },
     padding: "0 1vw",
   },
