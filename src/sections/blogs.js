@@ -11,18 +11,18 @@ const StyledLink = styled.a`
 const HireMe = () => {
   const content = (
     <>
-      You have a long-term project/position that you'd like to hire me for? Send
-      me a message to{" "}
+      Do you have a long-term project/position that you'd like to hire me for? Feel free to send
+      me an email to{" "}
       <StyledLink href="mailto:juandxce@gmail.com" target="_blank">
         juandxce@gmail.com
       </StyledLink>{" "}
-      and if we match I'll join your journey.
+      to discuss further.
     </>
   );
   return (
     <Box as="section" id="news" sx={styles.hireMe}>
       <Container>
-        <BlockTitle title="Hire THE Juandxce" text={content} />
+        <BlockTitle title="Am I available for hire?" text={content} />
       </Container>
     </Box>
   );

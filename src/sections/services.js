@@ -14,39 +14,39 @@ const SERVICES_DATA = [
     image: serviceImage1,
     text:
       "I'll build the user-facing features of your web platform with the latest and greatest JS technologies.",
-    heading: "Fronted development",
+    heading: "Front-end development",
     path: "#",
   },
   {
     image: serviceImage2,
     text:
-      "I'll help you build a secure and reliable backend that will become the foundation of your business.",
+      "I'll help you build you a secure, reliable, and scalable backend that will become the backbone of your business.",
     heading: "Backend development",
     path: "#",
   },
   {
     image: serviceImage3,
-    text: "Thinking of building an hybrid application? I got you covered.",
+    text: "Thinking of building a hybrid application? I got you covered.",
     heading: "App development",
     path: "#",
   },
   {
     image: serviceImage6,
-    text: "Is your web platform starting to feel sluggish? Let's fix that!.",
+    text: "Is your web platform starting to feel slow? Let's fix it!",
     heading: "Improve Performance",
     path: "#",
   },
   {
     image: serviceImage4,
     text:
-      "Want to create online campaings to promote your products? I do that too!.",
+      "Want to create online campaings to promote your products? I do that too!",
     heading: "Marketing & advertising",
     path: "#",
   },
   {
     image: serviceImage5,
     text:
-      "Google doesn't seem to like your website? I can help you change that.",
+      "Google doesn't seem to like your website? Let's change that.",
     heading: "SEO Optimization",
     path: "#",
   },
@@ -55,7 +55,7 @@ const Services = () => {
   return (
     <Box as="section" id="services" sx={styles.services}>
       <Container>
-        <BlockTitle title="Services" text="What services do I have to offer?" />
+        <BlockTitle title="Services" text="What services do I offer?" />
         <Grid sx={styles.grid}>
           {SERVICES_DATA.map(({ image, text, heading, path }, index) => (
             <ServiceCard

@@ -33,14 +33,19 @@ class BaseAccordion extends React.Component {
   handleItemClick = (index) => {
     this.internalSetState((state) => {
       const closing = state.openIndexes.includes(index);
+      const indexToRemove = state.openIndexes.indexOf(index);
+
+      if(indexToRemove !== -1){
+        state.openIndexes.splice(indexToRemove, 1)
+      } else {
+        state.openIndexes.push(index)
+      }
+
       return {
         type: closing ? 'closing' : 'opening',
-        openIndexes: closing
-          ? state.openIndexes.filter((i) => i !== index)
-          : [...state.openIndexes, index],
+        openIndexes: state.openIndexes,
       };
     });
-    console.log('clicked');
   };
   render() {
     return this.props.children({

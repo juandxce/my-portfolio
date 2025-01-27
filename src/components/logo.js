@@ -1,4 +1,5 @@
 /** @jsx jsx */
+/** @jsxRuntime classic */
 import { jsx, Image } from 'theme-ui';
 import { Link } from 'components/link';
 

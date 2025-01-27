@@ -6,7 +6,7 @@ import Accordion from "components/accordion/accordion";
 
 const accordionData = [
   {
-    isExpanded: false,
+    isExpanded: true,
     title: "What kind of work are you looking for?",
     contents: (
       <div>
@@ -16,14 +16,14 @@ const accordionData = [
     ),
   },
   {
-    isExpanded: false,
+    isExpanded: true,
     title: "What are your salary requirements?",
     contents: (
-      <div>At least 132kUSD/year, (negotiable if there's equity at stake).</div>
+      <div>120kUSD/year, (negotiable if there's equity at stake).</div>
     ),
   },
   {
-    isExpanded: false,
+    isExpanded: true,
     title: "What is your location/timezone?",
     contents: (
       <div>
@@ -33,22 +33,21 @@ const accordionData = [
     ),
   },
   {
-    isExpanded: false,
+    isExpanded: true,
     title: "What is your notice time?",
     contents: (
       <div>
-        I need 2 weeks to be able to leave everything in place before starting a
+        2 weeks would be enought time to leave everything in order before starting a
         new role.
       </div>
     ),
   },
   {
-    isExpanded: false,
+    isExpanded: true,
     title: "Are you eligible to work in the US?",
     contents: (
       <div>
-        No, I would need visa sponsorship if that was a requirement (but we are
-        in {new Date().getFullYear()} aren't we?). I can work as an
+        No, I would need visa sponsorship if that was a requirement, or work as an
         international contractor instead.
       </div>
     ),
@@ -56,16 +55,17 @@ const accordionData = [
 ];
 
 const FAQ = () => {
+  const [openIndexes, setOpenIndexes] = React.useState([0,1,2,3,4]);
   return (
     <Box as="section" id="faq" sx={styles.faq}>
       <Container>
         <BlockTitle
           title="Frequently Asked Questions"
-          text="Any questions? Maybe this will help"
+          text="Questions? Maybe this will help"
         />
         <Flex sx={styles.flex}>
           <Box sx={styles.faqWrapper}>
-            <Accordion items={accordionData} />
+            <Accordion items={accordionData} openIndexes={openIndexes} />
           </Box>
         </Flex>
       </Container>

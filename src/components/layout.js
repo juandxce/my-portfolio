@@ -1,4 +1,5 @@
 /** @jsx jsx */
+/** @jsxRuntime classic */
 import { jsx } from 'theme-ui';
 import React, { useCallback } from 'react';
 import Sticky from 'react-stickynode';

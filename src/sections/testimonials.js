@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import BlockTitle from "components/block-title";
 import TestimonialsCard from "components/cards/testimonial-card";
 import AAshop from "assets/portfolioimages/aashop.jpg";
-import cuda from "assets/portfolioimages/cuda.jpg";
+import JHQLogo from "assets/portfolioimages/JHQ.jpg";
 import wings from "assets/portfolioimages/wings.jpg";
 
 import citibanamexBancanetMovil from "assets/portfolioimages/citibanamexBancanetMovil.jpg";
@@ -64,11 +64,11 @@ const TESTIMONIALS_DATA = [
   ],
   [
     {
-      backgroundImage: cuda,
-      text: "Cuda PSD to HTML responsive site.",
-      name: "Cuda",
+      backgroundImage: JHQLogo,
+      text: "Justice HQ MVP from scratch.",
+      name: "JHQ",
       url:
-        "https://cdn.rawgit.com/juandxce/cuda-single-page/55918b21/index.html",
+        "https://justicehq.com",
     },
     {
       backgroundImage: eogresourcesSite,
@@ -134,10 +134,10 @@ const Testimonials = () => {
   };
   return (
     <Box as="section" id="testimonials" sx={styles.testimonials}>
-      <BlockTitle title="Portfolio" text="You can see some of my work below:" />
+      <BlockTitle title="Portfolio" text="Please find a few public sites I've worked on below:" />
       <Swiper {...testimonialCarousel}>
         {TESTIMONIALS_DATA.map((item, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={`${index}-${item.text}`}>
             {item.map(
               (
                 { image, backgroundImage, text, name, username, url },
@@ -168,5 +168,7 @@ const styles = {
     backgroundColor: "#505052",
     pt: ["80px", null, null, null, "80px", null, "100px"],
     pb: ["60px", null, null, null, "80px", null, "120px"],
+    pl: ["15px", null, null, null, null, null, null],
+    pr: ["15px", null, null, null, null, null, null],
   },
 };

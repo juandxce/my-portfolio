@@ -1,8 +1,74 @@
 import React, { useState, useEffect, useRef } from "react";
-import TagsCanvas from "react-tags-canvas";
+// import TagsCanvas from "react-tags-canvas";
 import { useBreakpoint } from "styled-breakpoints/react-styled";
 import { up } from "styled-breakpoints";
 import styled from "styled-components";
+import { Cloud, fetchSimpleIcons, renderSimpleIcon } from "react-icon-cloud";
+
+export const Const = {
+  maxWidth: 1000,
+  topNav: 64,
+  drawerWidth: 275,
+  reactScrollProps: {
+    spy: true,
+    smooth: true,
+    duration: 400,
+    activeClass: "scroll-active",
+    offset: -80,
+  },
+  rad: 10,
+  pad: 20,
+};
+
+const slugs = [
+  "react",
+  "redux",
+  "reduxsaga",
+  "typescript",
+  "angular",
+  "jquery",
+  "json",
+  "ionic",
+  "bootstrap",
+  "materialdesign",
+  "materialdesignicons",
+  "googlecloud",
+  "html5",
+  "css3",
+  "sass",
+  "firebase",
+  "gatsby",
+  "nodedotjs",
+  "express",
+  "nginx",
+  "graphql",
+  "couchbase",
+  "mongodb",
+  "antdesign",
+  "vercel",
+  "visualstudiocode",
+  "cypress",
+  "jest",
+];
+
+const useIcons = (slugs) => {
+  const [icons, setIcons] = React.useState();
+  React.useEffect(() => {
+    fetchSimpleIcons({ slugs }).then(setIcons);
+  }, []);
+
+  if (icons) {
+    return Object.values(icons.simpleIcons).map((icon) =>
+      renderSimpleIcon({
+        icon,
+        size: 42,
+        aProps: {
+          onClick: (e) => e.preventDefault(),
+        },
+      })
+    );
+  }
+};
 
 const StyledTagsWrapper = styled.div`
   width: 100%;
@@ -33,89 +99,54 @@ function DynamicComponent() {
       width: ref.current.clientWidth,
     });
   }, [ref]);
+  const height = elem.height;
+  const width = elem.width;
+  const icons = useIcons(slugs);
 
   return (
     <StyledTagsWrapper ref={ref}>
-      {/* There are 2 TagsCanvas so that 1 spins faster; The second one spins on top of the first */}
       {_document && (
-        <TagsCanvas
-          textColour="#ed911a"
-          maxSpeed={0.06}
-          freezeActive
-          shuffleTags
-          shape="sphere"
-          zoom={0.9}
-          initial={[0.05, 0.05]}
-          noMouse={!isLargeDevice && true}
-          noSelect
-          textFont={null}
-          textHeight={100}
-          height={elem.height}
-          width={elem.width}
-          wheelZoom={false}
-          tags={[
-            { value: "Angularjs", weight: 20 },
-            { value: "JQuery", weight: 20 },
-            { value: "Postgres", weight: 20 },
-            { value: "SQL", weight: 20 },
-            { value: "PHP", weight: 15 },
-          ]}
-        />
-      )}
-      {_document && (
-        <div
-          style={{
-            position: "absolute",
-            height: "100%",
-            width: "100%",
-            top: 0,
-            left: 0,
+        <Cloud
+          {...{
+            id: "primary-cloud",
+            containerProps: {
+              style: {
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginLeft: Const.pad * 2,
+                marginRight: Const.pad * 2,
+              },
+            },
+            canvasProps: {
+              style: {
+                maxWidth: isLargeDevice ? "55%" : "100%",
+              },
+            },
+            options: {
+              depth: 1,
+              wheelZoom: isLargeDevice,
+              pinchZoom: isLargeDevice,
+              zoom: 0.8,
+              zoomMax: 1,
+              zoomMin: 0.7,
+              maxSpeed: 0.05,
+              minSpeed: 0.03,
+              zoomStep: 0.01,
+              imageScale: 2,
+              activeCursor: "default",
+              tooltip: "native",
+              initial: [0.1, -0.1],
+              clickToFront: 500,
+              tooltipDelay: 0,
+              outlineColour: "#0000",
+            },
           }}
+          width={width}
+          height={height}
         >
-          <TagsCanvas
-            textColour="#ed911a"
-            maxSpeed={0.06}
-            freezeActive
-            shuffleTags
-            shape="sphere"
-            zoom={1}
-            initial={[0.05, 0.05]}
-            noMouse={!isLargeDevice && true}
-            noSelect
-            textFont={null}
-            textHeight={100}
-            height={elem.height}
-            width={elem.width}
-            wheelZoom={isLargeDevice && true}
-            pinchZoom={true}
-            zoomMax={1.5}
-            zoomMin={0.7}
-            zoomStep={0.01}
-            tags={[
-              { value: "JavaScript", weight: 30 },
-              { value: "React", weight: 30 },
-              { value: "Redux", weight: 20 },
-              { value: "Redux-saga", weight: 20 },
-              { value: "Angular 2+", weight: 20 },
-              { value: "Ionic", weight: 20 },
-              { value: "Bootstrap", weight: 20 },
-              { value: "Material UI", weight: 20 },
-              { value: "Firebase", weight: 20 },
-              { value: "GCP", weight: 20 },
-              { value: "HTML5", weight: 20 },
-              { value: "CSS3", weight: 20 },
-              { value: "SASS", weight: 20 },
-              { value: "Git", weight: 20 },
-              { value: "NodeJS", weight: 20 },
-              { value: "Express", weight: 20 },
-              { value: "Graphql", weight: 20 },
-              { value: "PouchDB", weight: 20 },
-              { value: "CouchDB", weight: 20 },
-              { value: "MongoDB", weight: 20 },
-              { value: "Firestore", weight: 20 },
-            ]}
-          />
-        </div>
+          {icons}
+        </Cloud>
       )}
     </StyledTagsWrapper>
   );

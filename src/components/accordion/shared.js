@@ -1,4 +1,5 @@
 /** @jsx jsx */
+/** @jsxRuntime classic */
 import { jsx } from 'theme-ui';
 import { motion } from 'framer-motion';
 

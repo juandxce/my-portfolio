@@ -1,4 +1,5 @@
 /** @jsx jsx */
+/** @jsxRuntime classic */
 import React from 'react';
 import { jsx, Box, Text, Container } from 'theme-ui';
 import { Link as ScrollLink } from 'react-scroll';

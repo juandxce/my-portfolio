@@ -85,7 +85,7 @@ const Banner = () => {
               <span className="dxce-tag">&#60;</span>Juandxce/
               <span className="dxce-tag">&#62;</span>
             </span>
-            , the developer that will help your company reach the sky
+            , and I've been helping companies build software, maybe I could help build yours too!
           </Heading>
         </Container>
       </Box>

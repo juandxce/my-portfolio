@@ -99,8 +99,8 @@ const AboutMe = (props) => {
       <Container>
         <BlockTitle
           title="About Me"
-          text={`Juandxce: a Full Stack developer. I've developed first-class software for the web during the last ${YOE} years (mainly focusing on the frontend).
-          I enjoy taking long walks and meeting new people/discovering new exciting places while helping companies grow their business.`}
+          text={`I've developed first-class software for the web during the last ${YOE} years (mainly focusing on the front-end).
+          I enjoy taking long walks and meeting new people, discovering exciting places and helping companies grow their business.`}
         />
         <Box sx={styles.socialMediaContainer}>
           <Tooltip title="LinkedIn">
@@ -157,13 +157,16 @@ const AboutMe = (props) => {
             <Flex>
               <Box className="first-skills-container" p={isLargeDevice && 2}>
                 <Text>I'm comfortable (and enjoy working with) with: </Text>
+                <Text>
                 <ul>
                   <li>JavaScript (ES6)</li>
                   <li>React.js</li>
                   <li>Redux / Redux-saga</li>
                   <li>Typescript</li>
+                  <li>Angularjs</li>
                   <li>Angular (2-5)</li>
-                  <li>ionic framework (2-4)</li>
+                  <li>JQuery</li>
+                  <li>Ionic framework (2-4)</li>
                   <li>Bootstrap</li>
                   <li>Material UI</li>
                   <li>Responsive Web Design</li>
@@ -175,24 +178,23 @@ const AboutMe = (props) => {
                   <li>Express</li>
                   <li>GraphQL (Apollo)</li>
                   <li>
-                    Non relational databases ( PouchDB, CouchDB, Mongodb,
+                    Non relational databases (PouchDB, CouchDB, Mongodb,
                     firestore, FB real-time DB)
                   </li>
                   <li>Cypress</li>
                   <li>Jest</li>
                 </ul>
+                </Text>
               </Box>
               <Box p={isLargeDevice && 2}>
-                <Text>And know:</Text>
+                <Text>And can get my way around:</Text>
                 <ul>
-                  <li>Angularjs</li>
-                  <li>JQuery</li>
-                  <li>(some) SQL (MySQL and PostgreSQL)</li>
-                  <li>(some) Python</li>
-                  <li>(some) PHP</li>
-                  <li>(some) C++</li>
-                  <li>(some) Jazmine</li>
-                  <li>(some) Mocha</li>
+                  <li>SQL (MySQL/PostgreSQL)</li>
+                  <li>Python</li>
+                  <li>PHP</li>
+                  <li>C++</li>
+                  <li>Jazmine</li>
+                  <li>Mocha</li>
                 </ul>
               </Box>
             </Flex>
@@ -228,7 +230,7 @@ const fadeIn2 = keyframes`
 const styles = {
   aboutMe: {
     pt: ["80px", null, null, null, "80px", null, "140px"],
-    pb: ["80px", null, null, null, "80px", "100px", "140px"],
+    pb: [null, null, null, null, "80px", "100px", "140px"],
     overflow: "hidden",
   },
   skills: {
