@@ -20,7 +20,6 @@ export default function Footer() {
               color: '#ffffff',
               opacity: '0.7',
               fontSize: '14px',
-              mt: ['10px', null, null, null, null, '0'],
             }}
           >
             © {new Date().getFullYear()} by Juandxce
@@ -112,16 +111,17 @@ const styles = {
     flexWrap: 'wrap',
   },
   linksWrap: {
-    mt: ['15px', null, null, null, null, '0'],
     display: 'flex',
     flexWrap: 'wrap',
+    justifyContent: ['space-around', null, null, null, null, 'space-between'],
     a: {
       fontSize: ['14px', null, null, null, '16px'],
       color: '#ffffff',
       transition: 'all 500ms ease',
       '&:hover': { opacity: 0.7 },
+      pl: ['24px', null, null, null, '24px'],
+      minWidth: '125px'
     },
-    'a+a': { ml: ['15px', null, null, null, '35px'] },
   },
   nav: {
     mx: 'auto',
@@ -134,11 +134,10 @@ const styles = {
       fontWeight: '400',
       cursor: 'pointer',
       lineHeight: '1.2',
-      mr: '48px',
+      pr: '24px',
+      pt: '8px',
+      pb: '8px',
       transition: '500ms',
-      ':last-child': {
-        mr: '0',
-      },
       '&:hover, &.active': {
         color: 'primary',
       },

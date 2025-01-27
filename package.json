@@ -3,16 +3,16 @@
   "version": "0.0.2",
   "private": true,
   "scripts": {
-    "dev": "NODE_OPTIONS='--openssl-legacy-provider' next dev",
-    "build": "NODE_OPTIONS='--openssl-legacy-provider' next build",
-    "serve": "NODE_OPTIONS='--openssl-legacy-provider' next start",
+    "dev": "next dev",
+    "build": "next build",
+    "serve": "next start",
     "export": "next export",
     "postbuild": "next-sitemap",
     "juandxce": "next build && next export && firebase deploy"
   },
   "dependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "next": "^10.0.0",
     "theme-ui": "^0.3.5",
     "react-custom-scrollbars": "^4.2.1",
@@ -33,7 +33,7 @@
     "react-tags-canvas": "^1.0.1",
     "react-waypoint": "^9.0.2",
     "simple-icons": "^11.2.0",
-    "styled-breakpoints": "^10.0.1",
+    "styled-breakpoints": "^10.2.3",
     "styled-components": "^5.3.1",
     "swiper": "^6.3.1",
     "typeface-dm-sans": "^1.1.3"

@@ -94,6 +94,11 @@ const AboutMe = (props) => {
   const YOE = new Date().getFullYear() - 2016;
   const isLargeDevice = useBreakpoint(up("lg"));
 
+  const socialMediaLinkStyles = {
+    ...styles.socialMediaLink,
+    ...(!isLargeDevice && styles.socialMediaLinkSmall),
+  };
+
   return (
     <Box as="section" id="about" sx={styles.aboutMe}>
       <Container>
@@ -104,7 +109,7 @@ const AboutMe = (props) => {
         <Box sx={styles.socialMediaContainer}>
           <Tooltip title="LinkedIn">
             <Link
-              sx={styles.socialMediaLink}
+              sx={socialMediaLinkStyles}
               href="https://www.linkedin.com/in/juandxce"
               target="_blank"
             >
@@ -114,7 +119,7 @@ const AboutMe = (props) => {
 
           <Tooltip title="GitHub">
             <Link
-              sx={styles.socialMediaLink}
+              sx={socialMediaLinkStyles}
               href="https://github.com/juandxce"
               target="_blank"
             >
@@ -123,7 +128,7 @@ const AboutMe = (props) => {
           </Tooltip>
           <Tooltip title="Twitter">
             <Link
-              sx={styles.socialMediaLink}
+              sx={socialMediaLinkStyles}
               href="https://twitter.com/Juandxce"
               target="_blank"
             >
@@ -132,7 +137,7 @@ const AboutMe = (props) => {
           </Tooltip>
           <TooltipExt title="Download CV">
             <Link
-              sx={styles.socialMediaLink}
+              sx={socialMediaLinkStyles}
               href="https://docs.google.com/document/d/1G7_xbdpPiGmLJu6un8fe_Moc1MrGht9f3JBfbMy7p_A/edit?usp=sharing"
               target="_blank"
             >
@@ -157,32 +162,32 @@ const AboutMe = (props) => {
               <Box className="first-skills-container" p={isLargeDevice && 2}>
                 <Text>I'm proficient in and enjoy working with: </Text>
                 <Text>
-                <ul>
-                  <li>JavaScript (ES6)</li>
-                  <li>React.js</li>
-                  <li>Redux / Redux-saga</li>
-                  <li>Typescript</li>
-                  <li>Angularjs</li>
-                  <li>Angular (2-5)</li>
-                  <li>JQuery</li>
-                  <li>Ionic framework (2-4)</li>
-                  <li>Bootstrap</li>
-                  <li>Material UI</li>
-                  <li>Responsive Web Design</li>
-                  <li>HTML</li>
-                  <li>CSS/SASS</li>
-                  <li>Firebase</li>
-                  <li>Google Cloud Platform</li>
-                  <li>Nodejs</li>
-                  <li>Express</li>
-                  <li>GraphQL (Apollo)</li>
-                  <li>
-                    Non relational databases (PouchDB, CouchDB, Mongodb,
-                    firestore, FB real-time DB)
-                  </li>
-                  <li>Cypress</li>
-                  <li>Jest</li>
-                </ul>
+                  <ul>
+                    <li>JavaScript (ES6)</li>
+                    <li>React.js</li>
+                    <li>Redux / Redux-saga</li>
+                    <li>Typescript</li>
+                    <li>Angularjs</li>
+                    <li>Angular (2-5)</li>
+                    <li>JQuery</li>
+                    <li>Ionic framework (2-4)</li>
+                    <li>Bootstrap</li>
+                    <li>Material UI</li>
+                    <li>Responsive Web Design</li>
+                    <li>HTML</li>
+                    <li>CSS/SASS</li>
+                    <li>Firebase</li>
+                    <li>Google Cloud Platform</li>
+                    <li>Nodejs</li>
+                    <li>Express</li>
+                    <li>GraphQL (Apollo)</li>
+                    <li>
+                      Non relational databases (PouchDB, CouchDB, Mongodb,
+                      firestore, FB real-time DB)
+                    </li>
+                    <li>Cypress</li>
+                    <li>Jest</li>
+                  </ul>
                 </Text>
               </Box>
               <Box p={isLargeDevice && 2}>
@@ -315,5 +320,12 @@ const styles = {
       },
     },
     padding: "0 1vw",
+  },
+  socialMediaLinkSmall: {
+    fontSize: "2em",
+    width: "3.5rem",
+    height: "3.5rem",
+    minWidth: "3.5rem",
+    marginRight: "8%",
   },
 };
