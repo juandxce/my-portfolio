@@ -1,0 +1,75 @@
+name: Enhanced Random Daily Increment
+
+on:
+  schedule:
+    - cron: '0 * * * 1-5'  # Runs every hour on weekdays
+  workflow_dispatch:        # Allows manual trigger
+
+jobs:
+  increment:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0    # Fetch full history for better randomization seed
+      
+      - name: Random delay and check
+        id: check
+        run: |
+          # Get current hour (0-23)
+          HOUR=$(date +%H)
+          
+          # Higher chance during business hours (9-17)
+          if [ $HOUR -ge 9 ] && [ $HOUR -le 17 ]; then
+            THRESHOLD=25  # 25% chance during business hours
+          else
+            THRESHOLD=15  # 15% chance during off hours
+          fi
+          
+          # Generate random number (0-99)
+          RANDOM_NUM=$(( $RANDOM % 100 ))
+          
+          # Determine if we should increment
+          if [ $RANDOM_NUM -lt $THRESHOLD ]; then
+            echo "should_increment=1" >> $GITHUB_OUTPUT
+            
+            # Random delay between 1-15 minutes
+            DELAY=$(( ($RANDOM % 15) + 1 ))
+            echo "Will increment after $DELAY minutes"
+            sleep ${DELAY}m
+          else
+            echo "should_increment=0" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update counter
+        if: steps.check.outputs.should_increment == '1'
+        run: |
+          # Pull latest changes in case other runs have updated the counter
+          git pull origin main
+          
+          # If file doesn't exist, create it with initial value
+          if [ ! -f counter.txt ]; then
+            echo "1" > counter.txt
+          else
+            # Read current value and increment
+            value=$(<counter.txt)
+            
+            # Random increment between 1 and 3
+            INCREMENT=$(( ($RANDOM % 3) + 1 ))
+            echo $((value + INCREMENT)) > counter.txt
+          fi
+          
+          # Store values for commit message
+          echo "increment_amount=$INCREMENT" >> $GITHUB_ENV
+          echo "new_value=$(<counter.txt)" >> $GITHUB_ENV
+
+      - name: Commit and push if changed
+        if: steps.check.outputs.should_increment == '1'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add counter.txt
+          git diff --quiet && git diff --staged --quiet || git commit -m "Increment counter by ${{ env.increment_amount }} to ${{ env.new_value }}"
+          git push || (git pull --rebase && git push)
