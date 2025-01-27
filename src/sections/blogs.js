@@ -11,8 +11,8 @@ const StyledLink = styled.a`
 const HireMe = () => {
   const content = (
     <>
-      Do you have a long-term project/position that you'd like to hire me for? Feel free to send
-      me an email to{" "}
+      If you have a long-term project or position in mind, feel free to reach
+      out via email at{" "}
       <StyledLink href="mailto:juandxce@gmail.com" target="_blank">
         juandxce@gmail.com
       </StyledLink>{" "}

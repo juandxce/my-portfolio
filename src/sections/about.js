@@ -99,8 +99,7 @@ const AboutMe = (props) => {
       <Container>
         <BlockTitle
           title="About Me"
-          text={`I've developed first-class software for the web during the last ${YOE} years (mainly focusing on the front-end).
-          I enjoy taking long walks and meeting new people, discovering exciting places and helping companies grow their business.`}
+          text={`Over the last ${YOE} years, I’ve developed first-class software for the web, focusing primarily on front-end development. I enjoy taking long walks, meeting new people, discovering exciting places, and helping companies grow their businesses.`}
         />
         <Box sx={styles.socialMediaContainer}>
           <Tooltip title="LinkedIn">
@@ -156,7 +155,7 @@ const AboutMe = (props) => {
             </Heading>
             <Flex>
               <Box className="first-skills-container" p={isLargeDevice && 2}>
-                <Text>I'm comfortable (and enjoy working with) with: </Text>
+                <Text>I'm proficient in and enjoy working with: </Text>
                 <Text>
                 <ul>
                   <li>JavaScript (ES6)</li>
@@ -187,7 +186,7 @@ const AboutMe = (props) => {
                 </Text>
               </Box>
               <Box p={isLargeDevice && 2}>
-                <Text>And can get my way around:</Text>
+                <Text>I also have working knowledge of:</Text>
                 <ul>
                   <li>SQL (MySQL/PostgreSQL)</li>
                   <li>Python</li>

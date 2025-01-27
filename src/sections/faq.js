@@ -10,8 +10,8 @@ const accordionData = [
     title: "What kind of work are you looking for?",
     contents: (
       <div>
-        Either contract or full-time is okay, contract requiring slightly higher
-        compensation. The position must be 100% remote.
+        I'm open to either contract or full-time work (contracts require
+        slightly higher compensation). The position must be 100% remote.
       </div>
     ),
   },
@@ -19,7 +19,10 @@ const accordionData = [
     isExpanded: true,
     title: "What are your salary requirements?",
     contents: (
-      <div>120kUSD/year, (negotiable if there's equity at stake).</div>
+      <div>
+        My salary expectation is at least $108k USD/year, negotiable if equity
+        is offered.
+      </div>
     ),
   },
   {
@@ -27,7 +30,7 @@ const accordionData = [
     title: "What is your location/timezone?",
     contents: (
       <div>
-        I'm located in Mexico City (GMT-6 timezone), and I'm flexible about
+        I'm based in Mexico City (GMT-6 timezone) and offer flexibility in
         working hours.
       </div>
     ),
@@ -37,8 +40,7 @@ const accordionData = [
     title: "What is your notice time?",
     contents: (
       <div>
-        2 weeks would be enought time to leave everything in order before starting a
-        new role.
+        I need two weeks to transition smoothly from my current commitments.
       </div>
     ),
   },
@@ -47,15 +49,15 @@ const accordionData = [
     title: "Are you eligible to work in the US?",
     contents: (
       <div>
-        No, I would need visa sponsorship if that was a requirement, or work as an
-        international contractor instead.
+        Not currently. I would require visa sponsorship for US-based roles or
+        could work as an international contractor instead.
       </div>
     ),
   },
 ];
 
 const FAQ = () => {
-  const [openIndexes, setOpenIndexes] = React.useState([0,1,2,3,4]);
+  const [openIndexes, setOpenIndexes] = React.useState([0, 1, 2, 3, 4]);
   return (
     <Box as="section" id="faq" sx={styles.faq}>
       <Container>

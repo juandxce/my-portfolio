@@ -134,7 +134,7 @@ const Testimonials = () => {
   };
   return (
     <Box as="section" id="testimonials" sx={styles.testimonials}>
-      <BlockTitle title="Portfolio" text="Please find a few public sites I've worked on below:" />
+      <BlockTitle title="Portfolio" text="Here are some public projects I've worked on:" />
       <Swiper {...testimonialCarousel}>
         {TESTIMONIALS_DATA.map((item, index) => (
           <SwiperSlide key={`${index}-${item.text}`}>

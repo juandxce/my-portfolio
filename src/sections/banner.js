@@ -80,12 +80,13 @@ const Banner = () => {
           />
 
           <Heading as="h2">
-            I'm{" "}
+            Hi, I'm{" "}
             <span className="dxce-wrapper">
               <span className="dxce-tag">&#60;</span>Juandxce/
               <span className="dxce-tag">&#62;</span>
-            </span>
-            , and I've been helping companies build software, maybe I could help build yours too!
+            </span>!
+            <br/>
+             I've been helping companies build exceptional software. Maybe I could help build yours too! 🚀
           </Heading>
         </Container>
       </Box>
