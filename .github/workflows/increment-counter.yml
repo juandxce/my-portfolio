@@ -47,7 +47,7 @@ jobs:
         if: steps.check.outputs.should_increment == '1'
         run: |
           # Pull latest changes in case other runs have updated the counter
-          git pull origin main
+          git pull origin master
           
           # If file doesn't exist, create it with initial value
           if [ ! -f counter.txt ]; then
