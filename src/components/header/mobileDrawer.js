@@ -43,9 +43,10 @@ const MobileDrawer = () => {
                 to={path}
                 spy={true}
                 smooth={true}
-                offset={10}
+                offset={-20}
                 duration={500}
                 key={i}
+                onClick={toggleHandler}
               >
                 {label}
               </ScrollLink>
