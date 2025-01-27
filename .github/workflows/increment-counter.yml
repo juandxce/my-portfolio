@@ -1,0 +1,30 @@
+name: Random Daily Increment
+
+on:
+  schedule:
+    - cron: '0 * * * 1-5'  # Trigger every hour from Monday to Friday
+  workflow_dispatch:          # Allows manual trigger
+
+jobs:
+  increment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up random decision
+        id: random
+        run: |
+          # Seed random with the current hour and day for reproducibility within the hour
+          RANDOM_SEED=$(date +%H%j)
+          RANDOM=$RANDOM_SEED
+          # Random number between 1 and 11
+          RANDOM_NUM=$((1 + RANDOM % 11))
+          echo "random_daily_count=$RANDOM_NUM" >> $GITHUB_ENV
+          echo "decision_random=$(( RANDOM % RANDOM_NUM ))" >> $GITHUB_ENV
+
+      - name: Decide whether to run increment
+        id: decide
+        run: |
+          # Compute current hour's decision
+          CURRENT_HOUR=$(date +%H)
+          decision=$(( $(( RANDOM % RANDOM_NUM )) == 0))
+          echo $VALUE >> Q
